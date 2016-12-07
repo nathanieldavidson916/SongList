@@ -29,6 +29,7 @@ function loadList()
   allSongs.push(new Song("Get Lucky","Daft Punk","Random Access Memories",2013));
   allSongs.push(new Song("Inevitable","Shakira","Dónde Están los Ladrones?",1998));
   allSongs.push(new Song("Wagon Wheel","Old Crow Medicine Show","Old Crow Medicine Show",2004));
+  displaySong();
 }
 
 //Progresses to the next song to the list, or if the end of the list has been
@@ -42,5 +43,5 @@ function nextSong()
 //Show song's information in the "nowPlaying" span
 function displaySong()
 {
-  document.getElementById("nowPlaying").innerHTML = allSongs[current].toString();
+  document.getElementById("nowPlaying").innerHTML = allSongs[current].toString() + " " + allSongs[current].releaseInfo();
 }
